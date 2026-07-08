@@ -1,0 +1,19 @@
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        m_sum=0
+        
+
+        for i in range(len(prices)):
+            for j in range(i+1,len(prices)):
+                if prices[i] < prices[j]:
+                    profit = prices[j] - prices[i]
+                    m_sum = prices[j]
+                    return m_sum
+                    
+        return m_sum
+
+                
+                
+
+        
+            
